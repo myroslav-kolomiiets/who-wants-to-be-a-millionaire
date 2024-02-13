@@ -1,0 +1,42 @@
+.homepage {
+  height: 100vh;
+  background: #212531;
+  background: linear-gradient(to right bottom, #fff 50%, #fff3eb 50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__link-h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    color: #1c1c21;
+    margin-block: 60px;
+  }
+}

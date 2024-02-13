@@ -1,0 +1,47 @@
+.menu-button {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 45px;
+  right: 40px;
+  z-index: 2;
+  overflow: hidden;
+
+  &__bar {
+    width: 18px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    background-color: #1c1c21;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-of-type(2) {
+      top: calc(50% - 5px);
+    }
+
+    &:nth-of-type(3) {
+      top: calc(50% + 5px);
+    }
+  }
+
+  &.active {
+    .menu-button__bar {
+      &:nth-of-type(1) {
+        display: none;
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+      }
+
+      &:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg);
+      }
+    }
+  }
+}

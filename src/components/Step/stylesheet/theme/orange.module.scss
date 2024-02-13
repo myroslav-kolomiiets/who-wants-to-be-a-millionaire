@@ -1,0 +1,12 @@
+.step {
+  &--theme {
+    &--orange {
+      stroke: #ff8b37;
+
+      text {
+        stroke: none;
+        fill: #ff8b37;
+      }
+    }
+  }
+}

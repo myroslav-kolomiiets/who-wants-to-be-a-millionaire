@@ -1,0 +1,25 @@
+.control {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
+  user-select: none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+
+  // sass-lint:disable no-vendor-prefixes
+  & {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+  }
+}

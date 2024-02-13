@@ -2,23 +2,35 @@
   "name": "who-wants-to-be-a-millionaire",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "email": "mir.kolomiets@gmail.com",
+    "name": "Myroslav Kolomiets"
+  },
+  "description": "Test assigment",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "next": "14.1.0",
     "react": "^18",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "react-use": "^17.5.0",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.70.0",
+    "typescript": "^5.3.3"
   }
 }

@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+.control {
+  &--size {
+    $size-map: (
+      'medium': (
+        'width': 296px,
+        'height': 64px
+      )
+    );
+
+    @each $value, $params in $size-map {
+      &--#{$value} {
+        @each $key in map.keys($params) {
+          #{$key}: map.get($params, $key);
+        }
+      }
+    }
+  }
+}
