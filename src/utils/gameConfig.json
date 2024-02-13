@@ -1,0 +1,281 @@
+{
+  "nextStepDelay": 1000,
+  "questions": [
+    {
+      "question": "How old your elder brother was 10 years before you was born, mate?",
+      "options": [
+        {
+          "marker": "A",
+          "content": "10 years",
+          "isCorrect": false
+        },
+        {
+          "marker": "B",
+          "content": "11 years",
+          "isCorrect": true
+        },
+        {
+          "marker": "C",
+          "content": "12 years",
+          "isCorrect": false
+        },
+        {
+          "marker": "D",
+          "content": "14 years",
+          "isCorrect": false
+        }
+      ],
+      "cost": 500
+    },
+    {
+      "question": "Question 2",
+      "options": [
+        {
+          "marker": "A",
+          "content": "Some variant 1",
+          "isCorrect": true
+        },
+        {
+          "marker": "B",
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "marker": "C",
+          "content": "Some variant 3",
+          "isCorrect": false
+        },
+        {
+          "marker": "D",
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 1000
+    },
+    {
+      "question": "Question 3",
+      "options": [
+        {
+          "marker": "A",
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "marker": "B",
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "marker": "C",
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "marker": "D",
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 2000
+    },
+    {
+      "question": "Question 4",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 4000
+    },
+    {
+      "question": "Question 5",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 8000
+    },
+    {
+      "question": "Question 6",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 16000
+    },
+    {
+      "question": "Question 7",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 32000
+    },
+    {
+      "question": "Question 8",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 64000
+    },
+    {
+      "question": "Question 9",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 125000
+    },
+    {
+      "question": "Question 10",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 250000
+    },
+    {
+      "question": "Question 11",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 500000
+    },
+    {
+      "question": "Question 12",
+      "options": [
+        {
+          "content": "Some variant 1",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 2",
+          "isCorrect": false
+        },
+        {
+          "content": "Some variant 3",
+          "isCorrect": true
+        },
+        {
+          "content": "Some variant 4",
+          "isCorrect": false
+        }
+      ],
+      "cost": 1000000
+    }
+  ]
+}

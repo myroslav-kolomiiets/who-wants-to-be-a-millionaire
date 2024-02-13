@@ -1,0 +1,71 @@
+.control {
+  &--theme {
+    &--hexagonal {
+      fill: #fff;
+      stroke: #d0d0d8;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      margin-block: 20px;
+      width: 405px;
+      height: 72px;
+      @media (max-width: 640px) {
+        width: 320px;
+        height: 56px;
+        font-size: 18px;
+        margin-block: 4px;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 1;
+        background-color: rgba(#000, 0);
+      }
+
+      @media (hover: hover), (-ms-high-contrast: none) {
+        &:hover {
+          stroke: #ff8b37;
+          transition: 0.3s;
+        }
+      }
+
+      &:active {
+        svg {
+          path {
+            fill: #fff3eb;
+            stroke: #ff8b37;
+            transition: 0.3s;
+          }
+        }
+      }
+
+      &.is-correct {
+        svg {
+          path {
+            fill: #e6faea;
+            stroke: #47d867;
+            transition: 0.3s;
+          }
+        }
+      }
+
+      &.is-wrong {
+        svg {
+          path {
+            fill: #fdeeed;
+            stroke: #ec6259;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

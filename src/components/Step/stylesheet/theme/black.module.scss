@@ -1,0 +1,12 @@
+.step {
+  &--theme {
+    &--black {
+      stroke: #d0d0d8;
+
+      text {
+        stroke: none;
+        fill: #1c1c21;
+      }
+    }
+  }
+}

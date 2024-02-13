@@ -1,0 +1,19 @@
+.step {
+  margin-block: 8px;
+  font-weight: 300;
+  font-size: 20px;
+  display: flex;
+  width: 376px;
+  height: 40px;
+
+  @media (max-width: 640px) {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+    font-size: 18px;
+    width: 320px;
+    height: 32px;
+  }
+}

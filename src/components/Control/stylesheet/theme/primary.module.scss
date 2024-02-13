@@ -1,0 +1,59 @@
+.control {
+  &--theme {
+    &--primary {
+      position: relative;
+      border-width: 0;
+      text-decoration: none;
+      fill: currentColor;
+      overflow: hidden;
+      background: #ff8b37;
+      color: #ffffff;
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      transition: 0.3s;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 1;
+        background-color: rgba(#000, 0);
+      }
+
+      @media (hover: hover), (-ms-high-contrast: none) {
+        &:hover {
+          background: #ffac70;
+        }
+      }
+
+      &:active {
+        background: #e87928;
+      }
+
+      &.is-disabled {
+        &,
+        &[disabled] {
+          background-color: #ffe3bf;
+          cursor: not-allowed;
+          box-shadow: none;
+          user-select: none;
+
+          &::before,
+          &::after {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
