@@ -1,8 +1,10 @@
 import * as React from 'react';
-import Control, { controlStates, controlThemes } from '../../components/Control/Control';
-import Steps from '../../components/Steps/Steps';
-import useSWR from 'swr';
 import { useRouter } from 'next/router';
+import useSWR from 'swr';
+import Control, { controlStates, controlThemes } from '../../components/Control/Control';
+import StatusMessage from '../../components/StatusMessage/StatusMessage';
+import { fetcher } from '../../utils/fetcher';
+import Steps from '../../components/Steps/Steps';
 
 interface Option {
   marker: string;
@@ -19,10 +21,6 @@ interface StaticData {
   nextStepDelay: number;
   questions: Array<Question>;
 }
-const fetcher = async (url: string) => {
-  const response = await fetch(url);
-  return response.json();
-};
 const Home: React.FC = () => {
   const [step, setStep] = React.useState<number>(0);
   const [earned, setEarned] = React.useState<number>(0);
@@ -38,7 +36,7 @@ const Home: React.FC = () => {
   }
 
   if (!data) {
-    return <div>Loading game configuration</div>;
+    return <StatusMessage />;
   }
 
   const { nextStepDelay, questions } = data;

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Control, {
   controlThemes,
   controlSizes
-} from '@/components/Control/Control';
+} from '../components/Control/Control';
 import logo from '../../public/images/logo.svg';
 
 export default function Home() {

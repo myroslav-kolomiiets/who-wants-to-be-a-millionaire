@@ -29,6 +29,7 @@ export const controlStates = {
 };
 
 export const controlSizes = {
+  small: 'small',
   medium: 'medium'
 };
 
