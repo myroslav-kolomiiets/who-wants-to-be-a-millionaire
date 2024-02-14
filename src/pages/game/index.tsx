@@ -63,12 +63,12 @@ const Game: React.FC = () => {
   };
 
   const handleOnClick = (option: Option) => {
-    setSelectedOption(option);
-
     const isFinalStep = currentStep === questions.length - 1;
     const isNotFinalStep = currentStep < questions.length - 1;
     const isAnswerCorrect = option.isCorrect;
     const currentStepCost = questions[currentStep].cost;
+
+    setSelectedOption(option);
 
     if (isAnswerCorrect) {
       setFeedbackClass(controlStates.isCorrect);

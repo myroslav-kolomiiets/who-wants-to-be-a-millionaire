@@ -10,6 +10,12 @@
       margin-block: 20px;
       width: 405px;
       height: 72px;
+      svg {
+        path {
+          transition: 0.3s ease-out;
+        }
+      }
+
       @media (max-width: 640px) {
         width: 320px;
         height: 56px;
@@ -33,7 +39,6 @@
       @media (hover: hover), (-ms-high-contrast: none) {
         &:hover {
           stroke: #ff8b37;
-          transition: 0.3s;
         }
       }
 
@@ -42,7 +47,6 @@
           path {
             fill: #fff3eb;
             stroke: #ff8b37;
-            transition: 0.3s;
           }
         }
       }
@@ -52,7 +56,6 @@
           path {
             fill: #e6faea;
             stroke: #47d867;
-            transition: 0.3s;
           }
         }
       }
@@ -62,7 +65,6 @@
           path {
             fill: #fdeeed;
             stroke: #ec6259;
-            transition: 0.3s;
           }
         }
       }
