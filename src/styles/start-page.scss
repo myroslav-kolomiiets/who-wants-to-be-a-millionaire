@@ -76,4 +76,30 @@
       font-size: 32px;
     }
   }
+
+  &__link-h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    color: #1c1c21;
+    opacity: 0.5;
+    margin-block: 0px;
+
+    @media (max-width: 640px) {
+      font-size: 18px;
+    }
+  }
+
+  &__link-h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    color: #1c1c21;
+    margin-block-start: 0px;
+    margin-block-end: 63px;
+
+    @media (max-width: 640px) {
+      font-size: 32px;
+    }
+  }
 }

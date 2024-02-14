@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
-import Control, { controlStates, controlThemes } from '../../components/Control/Control';
+import Control, {
+  controlStates,
+  controlThemes
+} from '../../components/Control/Control';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import { fetcher } from '../../utils/fetcher';
 import Steps from '../../components/Steps/Steps';
@@ -21,8 +24,8 @@ interface StaticData {
   nextStepDelay: number;
   questions: Array<Question>;
 }
-const Home: React.FC = () => {
-  const [step, setStep] = React.useState<number>(0);
+const Game: React.FC = () => {
+  const [currentStep, setCurrentStep] = React.useState<number>(0);
   const [earned, setEarned] = React.useState<number>(0);
   const [selectedOption, setSelectedOption] = React.useState<Option | null>(
     null
@@ -40,36 +43,57 @@ const Home: React.FC = () => {
   }
 
   const { nextStepDelay, questions } = data;
-  const costs = questions.map((question) => {
+  const costs = questions.map((question: Question) => {
     return question.cost;
-  })
+  });
 
-  const handleOnClick = (option: Option) => {
-    setSelectedOption(option);
-
-    if (option.isCorrect && step < questions.length - 1) {
-      setFeedbackClass(controlStates.isCorrect);
-      setTimeout(() => {
-        setStep((prevStep) => prevStep + 1);
-        setEarned(questions[step].cost);
-      }, nextStepDelay);
-    } else {
-      setFeedbackClass(controlStates.isWrong);
-      setTimeout(() => {
-        setStep(0);
-        setEarned(0);
-        router.push(`/final?earned=${earned}`);
-      }, nextStepDelay);
-    }
+  const stepForward = () => {
+    setTimeout(() => {
+      setCurrentStep((prevStep) => prevStep + 1);
+      setEarned(questions[currentStep].cost);
+    }, nextStepDelay);
   };
 
+  const finalizationScore = (earned: number) => {
+    setTimeout(() => {
+      setCurrentStep(0);
+      setEarned(0);
+      router.push(`/final?earned=${earned}`);
+    }, nextStepDelay);
+  };
+
+  const handleOnClick = (option: Option) => {
+    const isFinalStep = currentStep === questions.length - 1;
+    const isNotFinalStep = currentStep < questions.length - 1;
+    const isAnswerCorrect = option.isCorrect;
+    const currentStepCost = questions[currentStep].cost;
+
+    setSelectedOption(option);
+
+    if (isAnswerCorrect) {
+      setFeedbackClass(controlStates.isCorrect);
+
+      if (isNotFinalStep) {
+        stepForward();
+      }
+
+      if (isFinalStep) {
+        finalizationScore(currentStepCost);
+      }
+    } else {
+      setFeedbackClass(controlStates.isWrong);
+      finalizationScore(earned);
+    }
+  };
 
   return (
     <main className="container">
       <div className="game-main-block">
-        <h2 className="game-main-block__h2">{questions[step].question}</h2>
+        <h2 className="game-main-block__h2">
+          {questions[currentStep].question}
+        </h2>
         <div className="game-main-block__answers">
-          {questions[step].options.map((option: Option) => {
+          {questions[currentStep].options.map((option: Option) => {
             return (
               <Control
                 key={option.content}
@@ -92,9 +116,9 @@ const Home: React.FC = () => {
           })}
         </div>
       </div>
-      <Steps costs={costs} step={step} />
+      <Steps costs={costs} step={currentStep} />
     </main>
   );
 };
 
-export default Home;
+export default Game;
