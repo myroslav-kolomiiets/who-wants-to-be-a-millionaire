@@ -4,18 +4,18 @@ import styles from './style.module.scss';
 import Link from 'next/link';
 
 interface IControl {
-  theme: string;
-  size: string;
-  marker: string;
-  isSelected: boolean;
-  isCorrect: boolean;
-  isWrong: boolean;
-  isActive: boolean;
-  isPressed: boolean;
-  isNavigation: boolean;
-  href: string;
-  text: string;
-  onClick: () => void;
+  theme?: string;
+  size?: string;
+  marker?: string;
+  isSelected?: boolean;
+  isCorrect?: boolean;
+  isWrong?: boolean;
+  isActive?: boolean;
+  isPressed?: boolean;
+  isNavigation?: boolean;
+  href?: string;
+  text?: string;
+  onClick?: () => void;
 }
 
 export const controlThemes = {
@@ -52,7 +52,7 @@ const Control: React.FC<IControl> = ({
 
   if (isNavigation) {
     return (
-      <Link href={href} className={classNames}>
+      <Link href={href !== undefined ? href : '/'} className={classNames}>
         {text}
       </Link>
     );

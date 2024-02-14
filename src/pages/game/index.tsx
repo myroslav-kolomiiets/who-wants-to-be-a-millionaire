@@ -1,24 +1,23 @@
 import * as React from 'react';
-import Control, {
-  controlThemes,
-  controlStates
-} from '@/components/Control/Control';
-import Steps from '@/components/Steps/Steps';
+import Control, { controlStates, controlThemes } from '../../components/Control/Control';
+import Steps from '../../components/Steps/Steps';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
+
 interface Option {
   marker: string;
   content: string;
   isCorrect: boolean;
 }
 interface Question {
+  length: number;
   question: string;
-  options: Option[];
+  options: Array<Option>;
   cost: number;
 }
 interface StaticData {
   nextStepDelay: number;
-  questions: Question[];
+  questions: Array<Question>;
 }
 const fetcher = async (url: string) => {
   const response = await fetch(url);
@@ -41,31 +40,38 @@ const Home: React.FC = () => {
   if (!data) {
     return <div>Loading game configuration</div>;
   }
+
+  const { nextStepDelay, questions } = data;
+  const costs = questions.map((question) => {
+    return question.cost;
+  })
+
   const handleOnClick = (option: Option) => {
     setSelectedOption(option);
-    if (option.isCorrect && step < data.questions.length - 1) {
+
+    if (option.isCorrect && step < questions.length - 1) {
       setFeedbackClass(controlStates.isCorrect);
       setTimeout(() => {
         setStep((prevStep) => prevStep + 1);
-        setEarned(data.questions[step].cost);
-      }, data.nextStepDelay);
+        setEarned(questions[step].cost);
+      }, nextStepDelay);
     } else {
       setFeedbackClass(controlStates.isWrong);
-
       setTimeout(() => {
         setStep(0);
         setEarned(0);
         router.push(`/final?earned=${earned}`);
-      }, data.nextStepDelay);
+      }, nextStepDelay);
     }
   };
+
 
   return (
     <main className="container">
       <div className="game-main-block">
-        <h2 className="game-main-block__h2">{data.questions[step].question}</h2>
+        <h2 className="game-main-block__h2">{questions[step].question}</h2>
         <div className="game-main-block__answers">
-          {data.questions[step].options.map((option) => {
+          {questions[step].options.map((option: Option) => {
             return (
               <Control
                 key={option.content}
@@ -88,7 +94,7 @@ const Home: React.FC = () => {
           })}
         </div>
       </div>
-      <Steps questions={data.questions} step={step} />
+      <Steps costs={costs} step={step} />
     </main>
   );
 };

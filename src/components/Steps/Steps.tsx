@@ -1,16 +1,16 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import { isDesktop, isMobile } from 'react-device-detect';
-import Step, { stepThemes } from '@/components/Step/Step';
-import BurgerMenuButton from '@/components/BurgerMenuButton/BurgerMenuButton';
+import Step, { stepThemes } from '../../components/Step/Step';
+import BurgerMenuButton from '../../components/BurgerMenuButton/BurgerMenuButton';
 import styles from './style.module.scss';
 
 interface ISteps {
-  questions: [];
+  costs: Array<number>;
   step: number;
 }
 
-const Steps: React.FC<ISteps> = ({ questions, step }) => {
+const Steps: React.FC<ISteps> = ({ costs, step }) => {
   const [active, setActive] = React.useState(false);
 
   return (
@@ -23,18 +23,15 @@ const Steps: React.FC<ISteps> = ({ questions, step }) => {
       >
         <div className={classnames(styles['steps__wrapper'])}>
           {(isDesktop || active) &&
-            questions
-              .map((question: string, index: number) => {
-                const theme:
-                  | stepThemes.grey
-                  | stepThemes.orange
-                  | stepThemes.black =
+            costs
+              .map((cost: number, index: number) => {
+                const theme =
                   index < step
                     ? stepThemes.grey
                     : step === index
                       ? stepThemes.orange
                       : stepThemes.black;
-                return <Step key={index} question={question} theme={theme} />;
+                return <Step key={index} cost={cost} theme={theme} />;
               })
               .reverse()}
         </div>
