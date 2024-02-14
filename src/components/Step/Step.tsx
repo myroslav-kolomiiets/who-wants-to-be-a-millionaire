@@ -4,11 +4,7 @@ import styles from './style.module.scss';
 
 interface IStep {
   theme: string;
-  isCurrent: boolean;
-  isPassed: boolean;
-  question: {
-    cost: number;
-  };
+  cost: number;
 }
 
 export const stepThemes = {
@@ -17,14 +13,12 @@ export const stepThemes = {
   black: 'black'
 };
 
-const Step: React.FC<IStep> = ({ theme, isCurrent, isPassed, question }) => {
+const Step: React.FC<IStep> = ({ theme, cost }) => {
   const classNames = classnames(styles.step, {
-    [styles[`step--theme--${theme}`]]: theme,
-    [styles['is-current']]: isCurrent,
-    [styles['is-passed']]: isPassed
+    [styles[`step--theme--${theme}`]]: theme
   });
 
-  const formattedWinAmount = new Intl.NumberFormat().format(question.cost);
+  const formattedWinAmount = new Intl.NumberFormat().format(cost);
 
   return (
     <div className={classNames}>
@@ -32,7 +26,6 @@ const Step: React.FC<IStep> = ({ theme, isCurrent, isPassed, question }) => {
         width="100%"
         height="100%"
         viewBox="0 0 376 40"
-        // viewBox="0 0 320 32"
         preserveAspectRatio="xMidYMid meet"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
