@@ -5,7 +5,6 @@ import Control, {
 } from '../../components/Control/Control';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import logo from '../../../public/images/logo.svg';
 
 export default function Final() {
   const router = useRouter();
@@ -20,7 +19,9 @@ export default function Final() {
       <div className="homepage__image">
         <Image
           priority
-          src={logo}
+          src="/images/logo.svg"
+          width={624}
+          height={367}
           alt="logo"
           style={{
             objectFit: 'contain'
@@ -29,8 +30,8 @@ export default function Final() {
       </div>
       <div className="homepage__link">
         <div className="homepage__link-wrapper">
-          <h2 className="final-block__h2">Total score:</h2>
-          <h3 className="final-block__h3">{`$${formattedEarnedAmount} earned`}</h3>
+          <h2 className="homepage__link-h2">Total score:</h2>
+          <h3 className="homepage__link-h3">{`$${formattedEarnedAmount} earned`}</h3>
           <Control
             theme={controlThemes.primary}
             size={controlSizes.medium}

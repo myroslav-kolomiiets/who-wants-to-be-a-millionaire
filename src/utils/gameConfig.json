@@ -2,277 +2,277 @@
   "nextStepDelay": 1000,
   "questions": [
     {
-      "question": "How old your elder brother was 10 years before you was born, mate?",
+      "question": "In the UK, the abbreviation NHS stands for National what Service?",
       "options": [
         {
           "marker": "A",
-          "content": "10 years",
+          "content": "Humanity",
           "isCorrect": false
         },
         {
           "marker": "B",
-          "content": "11 years",
+          "content": "Health",
           "isCorrect": true
         },
         {
           "marker": "C",
-          "content": "12 years",
+          "content": "Honour",
           "isCorrect": false
         },
         {
           "marker": "D",
-          "content": "14 years",
+          "content": "Household",
           "isCorrect": false
         }
       ],
       "cost": 500
     },
     {
-      "question": "Question 2",
+      "question": "Which Disney character famously leaves a glass slipper behind at a royal ball?",
       "options": [
         {
           "marker": "A",
-          "content": "Some variant 1",
-          "isCorrect": true
+          "content": "Pocahontas",
+          "isCorrect": false
         },
         {
           "marker": "B",
-          "content": "Some variant 2",
+          "content": "Sleeping Beauty",
           "isCorrect": false
         },
         {
           "marker": "C",
-          "content": "Some variant 3",
-          "isCorrect": false
+          "content": "Cinderella",
+          "isCorrect": true
         },
         {
           "marker": "D",
-          "content": "Some variant 4",
+          "content": "Elsa",
           "isCorrect": false
         }
       ],
       "cost": 1000
     },
     {
-      "question": "Question 3",
+      "question": "What name is given to the revolving belt machinery in an airport that delivers checked luggage from the plane to baggage reclaim?",
       "options": [
         {
           "marker": "A",
-          "content": "Some variant 1",
+          "content": "Hangar",
           "isCorrect": false
         },
         {
           "marker": "B",
-          "content": "Some variant 2",
+          "content": "Terminal",
           "isCorrect": false
         },
         {
           "marker": "C",
-          "content": "Some variant 3",
-          "isCorrect": true
+          "content": "Concourse",
+          "isCorrect": false
         },
         {
           "marker": "D",
-          "content": "Some variant 4",
-          "isCorrect": false
+          "content": "Carousel",
+          "isCorrect": true
         }
       ],
       "cost": 2000
     },
     {
-      "question": "Question 4",
+      "question": "Which of these brands was chiefly associated with the manufacture of household locks?",
       "options": [
         {
-          "content": "Some variant 1",
+          "content": "Phillips",
           "isCorrect": false
         },
         {
-          "content": "Some variant 2",
+          "content": "Flymo",
           "isCorrect": false
         },
         {
-          "content": "Some variant 3",
+          "content": "Chubb",
           "isCorrect": true
         },
         {
-          "content": "Some variant 4",
+          "content": "Ronseal",
           "isCorrect": false
         }
       ],
       "cost": 4000
     },
     {
-      "question": "Question 5",
+      "question": "The hammer and sickle is one of the most recognisable symbols of which political ideology?",
       "options": [
         {
-          "content": "Some variant 1",
+          "content": "Republicanism",
           "isCorrect": false
         },
         {
-          "content": "Some variant 2",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 3",
+          "content": "Communism",
           "isCorrect": true
         },
         {
-          "content": "Some variant 4",
+          "content": "Conservatism",
+          "isCorrect": false
+        },
+        {
+          "content": "Liberalism",
           "isCorrect": false
         }
       ],
       "cost": 8000
     },
     {
-      "question": "Question 6",
+      "question": "Which toys have been marketed with the phrase “robots in disguise”?",
       "options": [
         {
-          "content": "Some variant 1",
+          "content": "Bratz Dolls",
           "isCorrect": false
         },
         {
-          "content": "Some variant 2",
+          "content": "Sylvanian Families",
           "isCorrect": false
         },
         {
-          "content": "Some variant 3",
+          "content": "Hatchimals",
+          "isCorrect": false
+        },
+        {
+          "content": "Transformers",
           "isCorrect": true
-        },
-        {
-          "content": "Some variant 4",
-          "isCorrect": false
         }
       ],
       "cost": 16000
     },
     {
-      "question": "Question 7",
+      "question": "What does the word loquacious mean?",
       "options": [
         {
-          "content": "Some variant 1",
+          "content": "Angry",
           "isCorrect": false
         },
         {
-          "content": "Some variant 2",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 3",
+          "content": "Chatty",
           "isCorrect": true
         },
         {
-          "content": "Some variant 4",
+          "content": "Beautiful",
+          "isCorrect": false
+        },
+        {
+          "content": "Shy",
           "isCorrect": false
         }
       ],
       "cost": 32000
     },
     {
-      "question": "Question 8",
+      "question": "Obstetrics is a branch of medicine particularly concerned with what?",
       "options": [
         {
-          "content": "Some variant 1",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 2",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 3",
+          "content": "Childbirth",
           "isCorrect": true
         },
         {
-          "content": "Some variant 4",
+          "content": "Broken bones",
+          "isCorrect": false
+        },
+        {
+          "content": "Heart conditions",
+          "isCorrect": false
+        },
+        {
+          "content": "Old age",
           "isCorrect": false
         }
       ],
       "cost": 64000
     },
     {
-      "question": "Question 9",
+      "question": "In Doctor Who, what was the signature look of the fourth Doctor, as portrayed by Tom Baker?",
       "options": [
         {
-          "content": "Some variant 1",
+          "content": "Bow-tie, braces and tweed jacket",
           "isCorrect": false
         },
         {
-          "content": "Some variant 2",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 3",
+          "content": "Wide-brimmed hat and extra long scarf",
           "isCorrect": true
         },
         {
-          "content": "Some variant 4",
+          "content": "Pinstripe suit and trainers",
+          "isCorrect": false
+        },
+        {
+          "content": "Cape, velvet jacket and frilly shirt",
           "isCorrect": false
         }
       ],
       "cost": 125000
     },
     {
-      "question": "Question 10",
+      "question": "Which of these religious observances lasts for the shortest period of time during the calendar year?",
       "options": [
         {
-          "content": "Some variant 1",
+          "content": "Ramadan",
           "isCorrect": false
         },
         {
-          "content": "Some variant 2",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 3",
+          "content": "Diwali",
           "isCorrect": true
         },
         {
-          "content": "Some variant 4",
+          "content": "Lent",
+          "isCorrect": false
+        },
+        {
+          "content": "Hanukkah",
           "isCorrect": false
         }
       ],
       "cost": 250000
     },
     {
-      "question": "Question 11",
+      "question": "At the closest point, which island group is only 50 miles south-east of the coast of Florida?",
       "options": [
         {
-          "content": "Some variant 1",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 2",
-          "isCorrect": false
-        },
-        {
-          "content": "Some variant 3",
+          "content": "Bahamas",
           "isCorrect": true
         },
         {
-          "content": "Some variant 4",
+          "content": "US Virgin Islands",
+          "isCorrect": false
+        },
+        {
+          "content": "Turks and Caicos Islands",
+          "isCorrect": false
+        },
+        {
+          "content": "Bermuda",
           "isCorrect": false
         }
       ],
       "cost": 500000
     },
     {
-      "question": "Question 12",
+      "question": "Construction of which of these famous landmarks was completed first?",
       "options": [
         {
-          "content": "Some variant 1",
+          "content": "Empire State Building",
           "isCorrect": false
         },
         {
-          "content": "Some variant 2",
+          "content": "Royal Albert Hall",
           "isCorrect": false
         },
         {
-          "content": "Some variant 3",
+          "content": "Eiffel Tower",
+          "isCorrect": false
+        },
+        {
+          "content": "Big Ben Clock Tower",
           "isCorrect": true
-        },
-        {
-          "content": "Some variant 4",
-          "isCorrect": false
         }
       ],
       "cost": 1000000

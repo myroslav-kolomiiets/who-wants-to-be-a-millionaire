@@ -4,7 +4,6 @@ import Control, {
   controlThemes,
   controlSizes
 } from '../components/Control/Control';
-import logo from '../../public/images/logo.svg';
 
 export default function Home() {
   return (
@@ -12,7 +11,9 @@ export default function Home() {
       <div className="homepage__image">
         <Image
           priority
-          src={logo}
+          src="/images/logo.svg"
+          width={624}
+          height={367}
           alt="logo"
           style={{
             objectFit: 'contain'
