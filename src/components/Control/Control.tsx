@@ -1,17 +1,14 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import styles from './style.module.scss';
 import Link from 'next/link';
+import styles from './style.module.scss';
 
 interface IControl {
   theme?: string;
   size?: string;
   marker?: string;
-  isSelected?: boolean;
   isCorrect?: boolean;
   isWrong?: boolean;
-  isActive?: boolean;
-  isPressed?: boolean;
   isNavigation?: boolean;
   href?: string;
   text?: string;
@@ -20,35 +17,37 @@ interface IControl {
 
 export const controlThemes = {
   hexagonal: 'hexagonal',
-  primary: 'primary'
+  primary: 'primary',
 };
 
 export const controlStates = {
   isCorrect: 'isCorrect',
-  isWrong: 'isWrong'
+  isWrong: 'isWrong',
 };
 
 export const controlSizes = {
   small: 'small',
-  medium: 'medium'
+  medium: 'medium',
 };
 
-const Control: React.FC<IControl> = ({
-  theme,
-  size,
-  marker,
-  isCorrect,
-  isWrong,
-  isNavigation,
-  text,
-  onClick,
-  href
-}) => {
+function Control(props: IControl) {
+  const {
+    theme,
+    size,
+    marker,
+    isCorrect,
+    isWrong,
+    isNavigation,
+    text,
+    onClick,
+    href,
+  } = props;
+
   const classNames = classnames(styles.control, {
     [styles[`control--size--${size}`]]: size,
     [styles[`control--theme--${theme}`]]: theme,
     [styles['is-correct']]: isCorrect,
-    [styles['is-wrong']]: isWrong
+    [styles['is-wrong']]: isWrong,
   });
 
   if (isNavigation) {
@@ -60,7 +59,7 @@ const Control: React.FC<IControl> = ({
   }
 
   return (
-    <button className={classNames} onClick={onClick}>
+    <button type="button" className={classNames} onClick={onClick}>
       <svg
         width="100%"
         height="100%"
@@ -83,6 +82,6 @@ const Control: React.FC<IControl> = ({
       </svg>
     </button>
   );
-};
+}
 
 export default Control;

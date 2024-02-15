@@ -9,7 +9,7 @@ export const useLockBodyScroll = (toggle: boolean) => {
       position.current = window.scrollY;
     }
     bodyStyles.top = toggle ? `-${position.current}px` : '';
-    bodyStyles.height = toggle ? `100vh` : '';
+    bodyStyles.height = toggle ? '100vh' : '';
     bodyStyles.position = toggle ? 'fixed' : '';
     window.scrollTo(0, position.current);
   }, [bodyStyles, toggle]);

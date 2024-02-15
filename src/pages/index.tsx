@@ -2,7 +2,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import Control, {
   controlThemes,
-  controlSizes
+  controlSizes,
 } from '../components/Control/Control';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
           height={367}
           alt="logo"
           style={{
-            objectFit: 'contain'
+            objectFit: 'contain',
           }}
         />
       </div>
@@ -24,7 +24,8 @@ export default function Home() {
         <div className="homepage__link-wrapper">
           <h1 className="homepage__link-h1">
             Who wants to be
-            <br />a millionaire?
+            <br />
+            a millionaire?
           </h1>
           <Control
             theme={controlThemes.primary}

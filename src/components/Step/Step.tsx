@@ -10,12 +10,14 @@ interface IStep {
 export const stepThemes = {
   grey: 'grey',
   orange: 'orange',
-  black: 'black'
+  black: 'black',
 };
 
-const Step: React.FC<IStep> = ({ theme, cost }) => {
+function Step(props: IStep) {
+  const { theme, cost } = props;
+
   const classNames = classnames(styles.step, {
-    [styles[`step--theme--${theme}`]]: theme
+    [styles[`step--theme--${theme}`]]: theme,
   });
 
   const formattedWinAmount = new Intl.NumberFormat().format(cost);
@@ -45,6 +47,6 @@ const Step: React.FC<IStep> = ({ theme, cost }) => {
       </svg>
     </div>
   );
-};
+}
 
 export default Step;

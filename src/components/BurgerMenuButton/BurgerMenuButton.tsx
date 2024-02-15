@@ -2,29 +2,29 @@ import * as React from 'react';
 import classnames from 'classnames';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 import styles from './style.module.scss';
+
 interface IBurgerMenuButton {
   active: boolean;
   setActive: (active: boolean) => void;
 }
+function BurgerMenuButton(props: IBurgerMenuButton) {
+  const { active, setActive } = props;
 
-const BurgerMenuButton: React.FC<IBurgerMenuButton> = ({
-  active,
-  setActive
-}) => {
   useLockBodyScroll(active);
 
   return (
-    <div
+    <button
+      type="button"
       className={classnames(styles['menu-button'], {
-        [styles['active']]: active
+        [styles.active]: active,
       })}
       onClick={() => setActive(!active)}
     >
-      <span className={classnames(styles['menu-button__bar'])}></span>
-      <span className={classnames(styles['menu-button__bar'])}></span>
-      <span className={classnames(styles['menu-button__bar'])}></span>
-    </div>
+      <span className={classnames(styles['menu-button__bar'])} />
+      <span className={classnames(styles['menu-button__bar'])} />
+      <span className={classnames(styles['menu-button__bar'])} />
+    </button>
   );
-};
+}
 
 export default BurgerMenuButton;
