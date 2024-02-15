@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import Control, {
@@ -25,12 +25,12 @@ interface StaticData {
   questions: Array<Question>;
 }
 function Game() {
-  const [currentStep, setCurrentStep] = React.useState<number>(0);
-  const [earned, setEarned] = React.useState<number>(0);
-  const [selectedOption, setSelectedOption] = React.useState<Option | null>(
+  const [currentStep, setCurrentStep] = useState<number>(0);
+  const [earned, setEarned] = useState<number>(0);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(
     null,
   );
-  const [feedbackClass, setFeedbackClass] = React.useState<string>('');
+  const [feedbackClass, setFeedbackClass] = useState<string>('');
   const router = useRouter();
   const { data, error } = useSWR<StaticData>('/api/staticData', fetcher);
 

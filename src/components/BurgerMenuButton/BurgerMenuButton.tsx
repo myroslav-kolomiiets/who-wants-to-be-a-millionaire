@@ -1,4 +1,3 @@
-import * as React from 'react';
 import classnames from 'classnames';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 import styles from './style.module.scss';
