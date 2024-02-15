@@ -31,9 +31,9 @@
     "no-console": "error",
     "react/require-default-props": "off",
     "@typescript-eslint/no-explicit-any": "error",
-    "react/prop-types": "off", // If you're using TypeScript, prop-types are not needed
-    "@typescript-eslint/explicit-module-boundary-types": "off", // Allows you to skip explicit return types in TypeScript
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }], // Only .tsx files for JSX
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -44,9 +44,9 @@
         "tsx": "never"
       }
     ],
-    "import/no-unresolved": "off", // TypeScript takes care of this
-    "react/react-in-jsx-scope": "off", // Not needed in Next.js
-    "react/jsx-props-no-spreading": "off", // Allowing spread props
+    "import/no-unresolved": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "import/prefer-default-export": "off"
