@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <main
+    class="homepage"
+  >
+    <div
+      class="homepage__image"
+    >
+      <img
+        alt="logo"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="367"
+        src="/images/logo.svg"
+        style="color: transparent; object-fit: contain;"
+        width="624"
+      />
+    </div>
+    <div
+      class="homepage__link"
+    >
+      <div
+        class="homepage__link-wrapper"
+      >
+        <h1
+          class="homepage__link-h1"
+        >
+          Who wants to be
+          <br />
+          a millionaire?
+        </h1>
+        <a
+          class="control control--size--medium control--theme--primary"
+          href="/game"
+        >
+          Start
+        </a>
+      </div>
+    </div>
+  </main>
+</div>
+`;
