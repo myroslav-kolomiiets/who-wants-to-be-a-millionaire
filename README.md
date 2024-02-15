@@ -4,16 +4,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
+```bash
+npm i
+# or
+yarn
+```
+
+Then run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -24,22 +27,6 @@ Run eslint
 npm run lint
 # or
 yarn lint
-# or
-pnpm lint
-# or
-bun lint
-```
-
-Run prettier
-
-```bash
-npm run prettier
-# or
-yarn prettier
-# or
-pnpm prettier
-# or
-bun prettier
 ```
 
 Repo of test assignment on [Github](https://github.com/myroslav-kolomiiets/who-wants-to-be-a-millionaire)

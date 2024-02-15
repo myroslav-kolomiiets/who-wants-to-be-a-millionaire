@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import Control, {
   controlStates,
-  controlThemes
+  controlThemes,
 } from '../../components/Control/Control';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import { fetcher } from '../../utils/fetcher';
@@ -24,11 +24,11 @@ interface StaticData {
   nextStepDelay: number;
   questions: Array<Question>;
 }
-const Game: React.FC = () => {
+function Game() {
   const [currentStep, setCurrentStep] = React.useState<number>(0);
   const [earned, setEarned] = React.useState<number>(0);
   const [selectedOption, setSelectedOption] = React.useState<Option | null>(
-    null
+    null,
   );
   const [feedbackClass, setFeedbackClass] = React.useState<string>('');
   const router = useRouter();
@@ -43,9 +43,7 @@ const Game: React.FC = () => {
   }
 
   const { nextStepDelay, questions } = data;
-  const costs = questions.map((question: Question) => {
-    return question.cost;
-  });
+  const costs = questions.map((question: Question) => question.cost);
 
   const stepForward = () => {
     setTimeout(() => {
@@ -54,11 +52,11 @@ const Game: React.FC = () => {
     }, nextStepDelay);
   };
 
-  const finalizationScore = (earned: number) => {
+  const finalizationScore = (totalEarned: number) => {
     setTimeout(() => {
       setCurrentStep(0);
       setEarned(0);
-      router.push(`/final?earned=${earned}`);
+      router.push(`/final?earned=${totalEarned}`);
     }, nextStepDelay);
   };
 
@@ -93,32 +91,30 @@ const Game: React.FC = () => {
           {questions[currentStep].question}
         </h2>
         <div className="game-main-block__answers">
-          {questions[currentStep].options.map((option: Option) => {
-            return (
-              <Control
-                key={option.content}
-                theme={controlThemes.hexagonal}
-                isCorrect={
-                  selectedOption !== null &&
-                  selectedOption.content === option.content &&
-                  feedbackClass === controlStates.isCorrect
-                }
-                isWrong={
-                  selectedOption !== null &&
-                  selectedOption.content === option.content &&
-                  feedbackClass === controlStates.isWrong
-                }
-                marker={option.marker}
-                text={option.content}
-                onClick={() => handleOnClick(option)}
-              />
-            );
-          })}
+          {questions[currentStep].options.map((option: Option) => (
+            <Control
+              key={option.content}
+              theme={controlThemes.hexagonal}
+              isCorrect={
+                selectedOption !== null
+                && selectedOption.content === option.content
+                && feedbackClass === controlStates.isCorrect
+              }
+              isWrong={
+                selectedOption !== null
+                && selectedOption.content === option.content
+                && feedbackClass === controlStates.isWrong
+              }
+              marker={option.marker}
+              text={option.content}
+              onClick={() => handleOnClick(option)}
+            />
+          ))}
         </div>
       </div>
       <Steps costs={costs} step={currentStep} />
     </main>
   );
-};
+}
 
 export default Game;

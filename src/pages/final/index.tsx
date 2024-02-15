@@ -1,17 +1,16 @@
 import * as React from 'react';
-import Control, {
-  controlThemes,
-  controlSizes
-} from '../../components/Control/Control';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Control, {
+  controlThemes,
+  controlSizes,
+} from '../../components/Control/Control';
 
-export default function Final() {
+function Final() {
   const router = useRouter();
   const { earned } = router.query;
 
-  const earnedAmount: number =
-    typeof earned === 'string' ? parseInt(earned, 10) || 0 : 0;
+  const earnedAmount: number = typeof earned === 'string' ? parseInt(earned, 10) || 0 : 0;
   const formattedEarnedAmount = new Intl.NumberFormat().format(earnedAmount);
 
   return (
@@ -24,7 +23,7 @@ export default function Final() {
           height={367}
           alt="logo"
           style={{
-            objectFit: 'contain'
+            objectFit: 'contain',
           }}
         />
       </div>
@@ -44,3 +43,5 @@ export default function Final() {
     </main>
   );
 }
+
+export default Final;
