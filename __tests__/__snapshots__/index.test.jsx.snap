@@ -13,35 +13,31 @@ exports[`renders homepage unchanged 1`] = `
         data-nimg="1"
         decoding="async"
         fetchpriority="high"
-        height="367"
+        height="300"
         src="/images/logo.svg"
-        style="color: transparent; object-fit: contain;"
-        width="624"
+        style="color: transparent; width: 100%; height: auto;"
+        width="500"
       />
     </div>
     <div
       class="homepage__link"
     >
-      <div
-        class="homepage__link-wrapper"
+      <h1
+        class="homepage__link-h1"
       >
-        <h1
-          class="homepage__link-h1"
+        Who wants to be
+        <br />
+        a millionaire?
+      </h1>
+      <div
+        class="homepage__link-button"
+      >
+        <a
+          class="control control--size--responsive control--theme--primary"
+          href="/game"
         >
-          Who wants to be
-          <br />
-          a millionaire?
-        </h1>
-        <div
-          class="homepage__link-button"
-        >
-          <a
-            class="control control--size--responsive control--theme--primary"
-            href="/game"
-          >
-            Start
-          </a>
-        </div>
+          Start
+        </a>
       </div>
     </div>
   </main>
