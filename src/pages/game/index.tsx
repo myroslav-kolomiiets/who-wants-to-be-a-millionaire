@@ -56,7 +56,7 @@ function Game() {
     setTimeout(() => {
       setCurrentStep(0);
       setEarned(0);
-      router.push(`/final?earned=${totalEarned}`);
+      router.push(`/?earned=${totalEarned}`);
     }, nextStepDelay);
   };
 

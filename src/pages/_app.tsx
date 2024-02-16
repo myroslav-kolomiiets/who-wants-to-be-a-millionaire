@@ -1,7 +1,6 @@
 import '@/styles/globals.scss';
-import '@/styles/start-page.scss';
+import '@/styles/homepage.scss';
 import '@/styles/game-page.scss';
-import '@/styles/final-page.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 

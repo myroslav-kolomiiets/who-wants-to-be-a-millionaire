@@ -32,12 +32,16 @@ exports[`renders homepage unchanged 1`] = `
           <br />
           a millionaire?
         </h1>
-        <a
-          class="control control--size--medium control--theme--primary"
-          href="/game"
+        <div
+          class="homepage__link-button"
         >
-          Start
-        </a>
+          <a
+            class="control control--size--responsive control--theme--primary"
+            href="/game"
+          >
+            Start
+          </a>
+        </div>
       </div>
     </div>
   </main>

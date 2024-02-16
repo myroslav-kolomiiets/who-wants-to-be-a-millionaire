@@ -27,6 +27,7 @@ export const controlStates = {
 export const controlSizes = {
   small: 'small',
   medium: 'medium',
+  responsive: 'responsive',
 };
 
 function Control(props: IControl) {
