@@ -1,4 +1,3 @@
-import * as React from 'react';
 import classnames from 'classnames';
 import Link from 'next/link';
 import styles from './style.module.scss';
@@ -28,6 +27,7 @@ export const controlStates = {
 export const controlSizes = {
   small: 'small',
   medium: 'medium',
+  responsive: 'responsive',
 };
 
 function Control(props: IControl) {

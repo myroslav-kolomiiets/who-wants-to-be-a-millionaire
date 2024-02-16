@@ -17,6 +17,10 @@
       text-align: center;
       transition: 0.3s;
 
+      @media (max-width: 640px) {
+        font-size: 14px;
+      }
+
       &::before {
         content: '';
         display: block;

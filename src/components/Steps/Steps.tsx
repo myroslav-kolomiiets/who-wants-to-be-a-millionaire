@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import classnames from 'classnames';
 import { isDesktop, isMobile } from 'react-device-detect';
 import Step, { stepThemes } from '../Step/Step';
@@ -13,7 +13,7 @@ interface ISteps {
 function Steps(props: ISteps) {
   const { costs, step } = props;
 
-  const [active, setActive] = React.useState(false);
+  const [active, setActive] = useState(false);
 
   return (
     <>

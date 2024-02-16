@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { useRef, useEffect } from 'react';
 
 export const useLockBodyScroll = (toggle: boolean) => {
-  const position = React.useRef(window.scrollY);
+  const position = useRef(window.scrollY);
   const bodyStyles = document.body.style;
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (toggle) {
       position.current = window.scrollY;
     }
