@@ -90,7 +90,7 @@ function Game() {
         <h2 className="game-main-block__h2">
           {questions[currentStep].question}
         </h2>
-        <div className="game-main-block__answers">
+        <div className="game-main-block__options">
           {questions[currentStep].options.map((option: Option) => (
             <Control
               key={option.content}
