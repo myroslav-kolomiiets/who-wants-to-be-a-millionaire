@@ -3,6 +3,7 @@
   background: #212531;
   background: linear-gradient(to right bottom, #fff 50%, #fff3eb 50%);
   display: flex;
+  justify-content: center;
   align-items: center;
 
   @media (max-width: 1024px) {
@@ -26,12 +27,21 @@
 
   &__link {
     margin-block-start: 10px;
+    width: 624px;
+
+    @media (max-width: 1280px) {
+      width: 524px;
+    }
 
     @media (max-width: 1024px) {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    @media (max-width: 640px) {
+      width: 288px;
     }
   }
 
