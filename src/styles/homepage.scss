@@ -26,6 +26,13 @@
 
   &__link {
     margin-block-start: 10px;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__link-button {
