@@ -7,24 +7,15 @@
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
-      margin-block: 17px;
-      width: 422px;
-      height: 72px;
+
       svg {
         path {
           transition: 0.3s ease-out;
         }
       }
 
-      @media (max-width: 1280px) {
-        margin-block: 6px;
-      }
-
       @media (max-width: 1024px) {
-        width: 320px;
-        height: 56px;
         font-size: 18px;
-        margin-block: 4px;
       }
 
       &::before {
