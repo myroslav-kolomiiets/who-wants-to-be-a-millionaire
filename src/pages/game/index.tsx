@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import Control, {
+  controlSizes,
   controlStates,
   controlThemes,
 } from '../../components/Control/Control';
@@ -92,23 +93,25 @@ function Game() {
         </h2>
         <div className="game-main-block__options">
           {questions[currentStep].options.map((option: Option) => (
-            <Control
-              key={option.content}
-              theme={controlThemes.hexagonal}
-              isCorrect={
-                selectedOption !== null
-                && selectedOption.content === option.content
-                && feedbackClass === controlStates.isCorrect
-              }
-              isWrong={
-                selectedOption !== null
-                && selectedOption.content === option.content
-                && feedbackClass === controlStates.isWrong
-              }
-              marker={option.marker}
-              text={option.content}
-              onClick={() => handleOnClick(option)}
-            />
+            <div className="game-main-block__options-item" key={option.content}>
+              <Control
+                theme={controlThemes.hexagonal}
+                size={controlSizes.responsive}
+                isCorrect={
+                  selectedOption !== null
+                  && selectedOption.content === option.content
+                  && feedbackClass === controlStates.isCorrect
+                }
+                isWrong={
+                  selectedOption !== null
+                  && selectedOption.content === option.content
+                  && feedbackClass === controlStates.isWrong
+                }
+                marker={option.marker}
+                text={option.content}
+                onClick={() => handleOnClick(option)}
+              />
+            </div>
           ))}
         </div>
       </div>

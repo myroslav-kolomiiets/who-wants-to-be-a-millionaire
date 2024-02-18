@@ -11,7 +11,7 @@
   outline: none;
 
   &__bar {
-    width: 18px;
+    width: 16px;
     height: 2px;
     position: absolute;
     top: 50%;
@@ -22,11 +22,11 @@
     transition: all 0.3s ease-in-out;
 
     &:nth-of-type(2) {
-      top: calc(50% - 5px);
+      top: calc(50% - 6px);
     }
 
     &:nth-of-type(3) {
-      top: calc(50% + 5px);
+      top: calc(50% + 6px);
     }
   }
 
