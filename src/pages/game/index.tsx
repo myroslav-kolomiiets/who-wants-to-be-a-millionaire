@@ -10,7 +10,7 @@ import {
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import { fetcher } from '../../utils/fetcher';
 import Steps from '../../components/Steps/Steps';
-import { IOption, IQuestion, IStaticData } from './gameDataTypes';
+import { IOption, IQuestion, IStaticData } from '../../types/gameDataTypes';
 
 function Game() {
   const [currentStep, setCurrentStep] = useState<number>(0);
