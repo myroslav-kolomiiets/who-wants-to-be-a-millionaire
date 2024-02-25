@@ -3,14 +3,15 @@ import Link from 'next/link';
 import styles from './style.module.scss';
 
 interface IControl {
-  theme?: string;
+  theme: string;
   size?: string;
   marker?: string;
   isCorrect?: boolean;
   isWrong?: boolean;
   isNavigation?: boolean;
+  isDisabled?: boolean;
   href?: string;
-  text?: string;
+  text: string;
   onClick?: () => void;
 }
 
@@ -38,6 +39,7 @@ function Control(props: IControl) {
     isCorrect,
     isWrong,
     isNavigation,
+    isDisabled,
     text,
     onClick,
     href,
@@ -48,6 +50,7 @@ function Control(props: IControl) {
     [styles[`control--theme--${theme}`]]: theme,
     [styles['is-correct']]: isCorrect,
     [styles['is-wrong']]: isWrong,
+    [styles['is-disabled']]: isDisabled,
   });
 
   if (isNavigation) {

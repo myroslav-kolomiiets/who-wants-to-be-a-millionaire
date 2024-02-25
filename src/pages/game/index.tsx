@@ -50,6 +50,7 @@ function Game() {
     setTimeout(() => {
       setCurrentStep((prevStep) => prevStep + 1);
       setEarned(questions[currentStep].cost);
+      setFeedbackClass('');
     }, nextStepDelay);
   };
 
@@ -107,6 +108,7 @@ function Game() {
                   && selectedOption.content === option.content
                   && feedbackClass === controlStates.isWrong
                 }
+                isDisabled={!!feedbackClass}
                 marker={option.marker}
                 text={option.content}
                 onClick={() => handleOnClick(option)}
