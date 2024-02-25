@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import Link from 'next/link';
 import styles from './style.module.scss';
-import IControl from './IControl';
+import { IControl } from './IControl';
 
 function Control(props: IControl) {
   const {

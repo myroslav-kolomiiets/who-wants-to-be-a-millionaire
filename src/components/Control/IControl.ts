@@ -1,6 +1,6 @@
 import { ControlThemes, ControlSizes } from './controlProps';
 
-interface IControl {
+export interface IControl {
   theme: ControlThemes;
   size?: ControlSizes;
   marker?: string;
@@ -12,5 +12,3 @@ interface IControl {
   text: string;
   onClick?: () => void;
 }
-
-export default IControl;
