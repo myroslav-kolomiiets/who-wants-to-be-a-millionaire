@@ -1,16 +1,6 @@
 import classnames from 'classnames';
 import styles from './style.module.scss';
-
-interface IStep {
-  theme: string;
-  cost: number;
-}
-
-export const stepThemes = {
-  grey: 'grey',
-  orange: 'orange',
-  black: 'black',
-};
+import { IStep } from './IStep';
 
 function Step(props: IStep) {
   const { theme, cost } = props;

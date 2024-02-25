@@ -1,11 +1,8 @@
 import classnames from 'classnames';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 import styles from './style.module.scss';
+import { IBurgerMenuButton } from './IBurgerMenuButton';
 
-interface IBurgerMenuButton {
-  active: boolean;
-  setActive: (active: boolean) => void;
-}
 function BurgerMenuButton(props: IBurgerMenuButton) {
   const { active, setActive } = props;
 

@@ -1,39 +1,26 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
-import Control, {
-  controlSizes,
-  controlStates,
-  controlThemes,
-} from '../../components/Control/Control';
+import Control from '../../components/Control/Control';
+import {
+  ControlSizes,
+  ControlStates,
+  ControlThemes,
+} from '../../components/Control/controlProps';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import { fetcher } from '../../utils/fetcher';
 import Steps from '../../components/Steps/Steps';
+import { IOption, IQuestion, IStaticData } from '../../types/gameDataTypes';
 
-interface Option {
-  marker: string;
-  content: string;
-  isCorrect: boolean;
-}
-interface Question {
-  length: number;
-  question: string;
-  options: Array<Option>;
-  cost: number;
-}
-interface StaticData {
-  nextStepDelay: number;
-  questions: Array<Question>;
-}
 function Game() {
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [earned, setEarned] = useState<number>(0);
-  const [selectedOption, setSelectedOption] = useState<Option | null>(
+  const [selectedOption, setSelectedOption] = useState<IOption | null>(
     null,
   );
   const [feedbackClass, setFeedbackClass] = useState<string>('');
   const router = useRouter();
-  const { data, error } = useSWR<StaticData>('/api/staticData', fetcher);
+  const { data, error } = useSWR<IStaticData>('/api/staticData', fetcher);
 
   if (error) {
     throw error;
@@ -44,7 +31,7 @@ function Game() {
   }
 
   const { nextStepDelay, questions } = data;
-  const costs = questions.map((question: Question) => question.cost);
+  const costs = questions.map((question: IQuestion) => question.cost);
 
   const stepForward = () => {
     setTimeout(() => {
@@ -62,7 +49,7 @@ function Game() {
     }, nextStepDelay);
   };
 
-  const handleOnClick = (option: Option) => {
+  const handleOnClick = (option: IOption) => {
     const isFinalStep = currentStep === questions.length - 1;
     const isNotFinalStep = currentStep < questions.length - 1;
     const isAnswerCorrect = option.isCorrect;
@@ -71,7 +58,7 @@ function Game() {
     setSelectedOption(option);
 
     if (isAnswerCorrect) {
-      setFeedbackClass(controlStates.isCorrect);
+      setFeedbackClass(ControlStates.IsCorrect);
 
       if (isNotFinalStep) {
         stepForward();
@@ -81,7 +68,7 @@ function Game() {
         finalizationScore(currentStepCost);
       }
     } else {
-      setFeedbackClass(controlStates.isWrong);
+      setFeedbackClass(ControlStates.IsWrong);
       finalizationScore(earned);
     }
   };
@@ -93,20 +80,20 @@ function Game() {
           {questions[currentStep].question}
         </h2>
         <div className="game-main-block__options">
-          {questions[currentStep].options.map((option: Option) => (
+          {questions[currentStep].options.map((option: IOption) => (
             <div className="game-main-block__options-item" key={option.content}>
               <Control
-                theme={controlThemes.hexagonal}
-                size={controlSizes.responsive}
+                theme={ControlThemes.Hexagonal}
+                size={ControlSizes.Responsive}
                 isCorrect={
                   selectedOption !== null
                   && selectedOption.content === option.content
-                  && feedbackClass === controlStates.isCorrect
+                  && feedbackClass === ControlStates.IsCorrect
                 }
                 isWrong={
                   selectedOption !== null
                   && selectedOption.content === option.content
-                  && feedbackClass === controlStates.isWrong
+                  && feedbackClass === ControlStates.IsWrong
                 }
                 isDisabled={!!feedbackClass}
                 marker={option.marker}
