@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import classnames from 'classnames';
-import Control, {
-  controlThemes,
-  controlSizes,
-} from '../components/Control/Control';
+import Control from '../components/Control/Control';
+import {
+  ControlThemes,
+  ControlSizes,
+} from '../components/Control/controlProps';
 
 export default function Home() {
   const router = useRouter();
@@ -46,8 +47,8 @@ export default function Home() {
 
         <div className="homepage__link-button">
           <Control
-            theme={controlThemes.primary}
-            size={controlSizes.responsive}
+            theme={ControlThemes.Primary}
+            size={ControlSizes.Responsive}
             text={earned ? 'Try again' : 'Start'}
             href="/game"
             isNavigation

@@ -1,35 +1,7 @@
 import classnames from 'classnames';
 import Link from 'next/link';
 import styles from './style.module.scss';
-
-interface IControl {
-  theme: string;
-  size?: string;
-  marker?: string;
-  isCorrect?: boolean;
-  isWrong?: boolean;
-  isNavigation?: boolean;
-  isDisabled?: boolean;
-  href?: string;
-  text: string;
-  onClick?: () => void;
-}
-
-export const controlThemes = {
-  hexagonal: 'hexagonal',
-  primary: 'primary',
-};
-
-export const controlStates = {
-  isCorrect: 'isCorrect',
-  isWrong: 'isWrong',
-};
-
-export const controlSizes = {
-  small: 'small',
-  medium: 'medium',
-  responsive: 'responsive',
-};
+import IControl from './IControl';
 
 function Control(props: IControl) {
   const {

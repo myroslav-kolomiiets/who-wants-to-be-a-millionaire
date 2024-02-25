@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import classnames from 'classnames';
 import { isDesktop, isMobile } from 'react-device-detect';
-import Step, { stepThemes } from '../Step/Step';
+import Step from '../Step/Step';
+import { StepThemes } from '../Step/stepProps';
 import BurgerMenuButton from '../BurgerMenuButton/BurgerMenuButton';
 import styles from './style.module.scss';
 
@@ -29,11 +30,11 @@ function Steps(props: ISteps) {
               .map((cost: number, index: number) => {
                 let theme;
                 if (step === index) {
-                  theme = stepThemes.orange;
+                  theme = StepThemes.Orange;
                 } else if (index < step) {
-                  theme = stepThemes.grey;
+                  theme = StepThemes.Grey;
                 } else {
-                  theme = stepThemes.black;
+                  theme = StepThemes.Black;
                 }
                 return <Step key={cost} cost={cost} theme={theme} />;
               })
