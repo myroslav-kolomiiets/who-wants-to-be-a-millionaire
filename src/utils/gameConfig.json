@@ -7,22 +7,26 @@
         {
           "marker": "A",
           "content": "Humanity",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "marker": "B",
           "content": "Health",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "marker": "C",
           "content": "Honour",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "marker": "D",
           "content": "Household",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         }
       ],
       "cost": 500
@@ -33,22 +37,26 @@
         {
           "marker": "A",
           "content": "Pocahontas",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "marker": "B",
           "content": "Sleeping Beauty",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "marker": "C",
           "content": "Cinderella",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "marker": "D",
           "content": "Elsa",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         }
       ],
       "cost": 1000
@@ -59,22 +67,26 @@
         {
           "marker": "A",
           "content": "Hangar",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "marker": "B",
           "content": "Terminal",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "marker": "C",
           "content": "Concourse",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "marker": "D",
           "content": "Carousel",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         }
       ],
       "cost": 2000
@@ -84,19 +96,23 @@
       "options": [
         {
           "content": "Phillips",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Flymo",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "content": "Chubb",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "content": "Ronseal",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         }
       ],
       "cost": 4000
@@ -106,19 +122,23 @@
       "options": [
         {
           "content": "Republicanism",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Communism",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "content": "Conservatism",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "content": "Liberalism",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         }
       ],
       "cost": 8000
@@ -128,19 +148,23 @@
       "options": [
         {
           "content": "Bratz Dolls",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Sylvanian Families",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "content": "Hatchimals",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Transformers",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         }
       ],
       "cost": 16000
@@ -150,19 +174,23 @@
       "options": [
         {
           "content": "Angry",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Chatty",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "content": "Beautiful",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Shy",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         }
       ],
       "cost": 32000
@@ -172,19 +200,23 @@
       "options": [
         {
           "content": "Childbirth",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "content": "Broken bones",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Heart conditions",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Old age",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         }
       ],
       "cost": 64000
@@ -194,19 +226,23 @@
       "options": [
         {
           "content": "Bow-tie, braces and tweed jacket",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Wide-brimmed hat and extra long scarf",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "content": "Pinstripe suit and trainers",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Cape, velvet jacket and frilly shirt",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         }
       ],
       "cost": 125000
@@ -216,19 +252,23 @@
       "options": [
         {
           "content": "Ramadan",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Diwali",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "content": "Lent",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "content": "Hanukkah",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         }
       ],
       "cost": 250000
@@ -238,19 +278,23 @@
       "options": [
         {
           "content": "Bahamas",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         },
         {
           "content": "US Virgin Islands",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "content": "Turks and Caicos Islands",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Bermuda",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         }
       ],
       "cost": 500000
@@ -260,19 +304,23 @@
       "options": [
         {
           "content": "Empire State Building",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Royal Albert Hall",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": true
         },
         {
           "content": "Eiffel Tower",
-          "isCorrect": false
+          "isCorrect": false,
+          "isRemovable": false
         },
         {
           "content": "Big Ben Clock Tower",
-          "isCorrect": true
+          "isCorrect": true,
+          "isRemovable": false
         }
       ],
       "cost": 1000000

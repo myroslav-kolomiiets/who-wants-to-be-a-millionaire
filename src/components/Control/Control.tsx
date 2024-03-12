@@ -11,7 +11,9 @@ function Control(props: IControl) {
     isCorrect,
     isWrong,
     isNavigation,
+    isHelpOption,
     isDisabled,
+    isRemoved,
     text,
     onClick,
     href,
@@ -23,7 +25,16 @@ function Control(props: IControl) {
     [styles['is-correct']]: isCorrect,
     [styles['is-wrong']]: isWrong,
     [styles['is-disabled']]: isDisabled,
+    [styles['is-removed']]: isRemoved,
   });
+
+  if (isHelpOption) {
+    return (
+      <button type="button" className={classNames} onClick={onClick}>
+        {text}
+      </button>
+    );
+  }
 
   if (isNavigation) {
     return (

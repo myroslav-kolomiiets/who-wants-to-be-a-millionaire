@@ -3,6 +3,10 @@
 .control {
   &--size {
     $size-map: (
+      'extra-small': (
+        'width': 80px,
+        'height': 40px
+      ),
       'small': (
         'width': 288px,
         'height': 48px

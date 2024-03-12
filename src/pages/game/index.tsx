@@ -2,11 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import Control from '../../components/Control/Control';
-import {
-  ControlSizes,
-  ControlStates,
-  ControlThemes,
-} from '../../components/Control/controlProps';
+import { ControlSizes, ControlStates, ControlThemes } from '../../components/Control/controlProps';
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import { fetcher } from '../../utils/fetcher';
 import Steps from '../../components/Steps/Steps';
@@ -15,6 +11,8 @@ import { IOption, IQuestion, IStaticData } from '../../types/gameDataTypes';
 function Game() {
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [earned, setEarned] = useState<number>(0);
+  const [fiftyFiftyUsedOnStep, setFiftyFiftyUsedOnStep] = useState<boolean>(false);
+  const [disabledHelpOption, setDisabledHelpOption] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<IOption | null>(
     null,
   );
@@ -37,6 +35,7 @@ function Game() {
     setTimeout(() => {
       setCurrentStep((prevStep) => prevStep + 1);
       setEarned(questions[currentStep].cost);
+      setFiftyFiftyUsedOnStep(false);
       setFeedbackClass('');
     }, nextStepDelay);
   };
@@ -73,6 +72,14 @@ function Game() {
     }
   };
 
+  const handleOnClickFiftyFifty = () => {
+    if (disabledHelpOption) {
+      return;
+    }
+    setFiftyFiftyUsedOnStep(true);
+    setDisabledHelpOption(true);
+  };
+
   return (
     <main className="container">
       <div className="game-main-block">
@@ -96,12 +103,23 @@ function Game() {
                   && feedbackClass === ControlStates.IsWrong
                 }
                 isDisabled={!!feedbackClass}
+                isRemoved={fiftyFiftyUsedOnStep && option.isRemovable}
                 marker={option.marker}
                 text={option.content}
                 onClick={() => handleOnClick(option)}
               />
             </div>
           ))}
+        </div>
+        <div className="game-main-block__help">
+          <Control
+            theme={ControlThemes.Rounded}
+            size={ControlSizes.ExtraSmall}
+            text="50:50"
+            onClick={() => handleOnClickFiftyFifty()}
+            isDisabled={disabledHelpOption}
+            isHelpOption
+          />
         </div>
       </div>
       <Steps costs={costs} step={currentStep} />
