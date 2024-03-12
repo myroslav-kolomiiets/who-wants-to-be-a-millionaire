@@ -1,0 +1,43 @@
+.control {
+  &--theme {
+    &--rounded {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #ff8b37;
+      background-color: #fff;
+      border: 1px solid #d0d0d8;
+      border-radius: 50%;
+      transition: 0.3s ease-out;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 1;
+        background-color: rgba(#000, 0);
+      }
+
+      @media (hover: hover), (-ms-high-contrast: none) {
+        &:hover {
+          border-color: #ff8b37;
+        }
+      }
+
+      &:active {
+        border-color: #ff8b37;
+      }
+
+      &.is-disabled {
+        pointer-events: none;
+        opacity: 0.4;
+      }
+    }
+  }
+}

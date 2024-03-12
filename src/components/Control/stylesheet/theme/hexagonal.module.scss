@@ -67,6 +67,12 @@
       &.is-disabled {
         pointer-events: none;
       }
+
+      &.is-removed {
+        pointer-events: none;
+        opacity: 0.4;
+        transition: 0.3s ease-out;
+      }
     }
   }
 }

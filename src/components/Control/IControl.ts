@@ -6,7 +6,9 @@ export interface IControl {
   marker?: string;
   isCorrect?: boolean;
   isWrong?: boolean;
+  isRemoved?: boolean;
   isNavigation?: boolean;
+  isHelpOption?: boolean;
   isDisabled?: boolean;
   href?: string;
   text: string;

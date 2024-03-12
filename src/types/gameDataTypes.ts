@@ -2,6 +2,7 @@ export interface IOption {
   marker: string;
   content: string;
   isCorrect: boolean;
+  isRemovable: boolean;
 }
 
 export interface IQuestion {
