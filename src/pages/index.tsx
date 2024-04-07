@@ -12,7 +12,9 @@ export default function Home() {
   const dispatch = useAppDispatch();
 
   const { earned } = useAppSelector((state) => state.gameReducer);
-  const { setEarned, setCurrentStep, setFiftyFiftyUsedOnStep, setDisabledHelpOption } = gameSlice.actions;
+  const {
+    setEarned, setCurrentStep, setFiftyFiftyUsedOnStep, setDisabledHelpOption,
+  } = gameSlice.actions;
 
   const formattedEarned = new Intl.NumberFormat().format(earned);
 
