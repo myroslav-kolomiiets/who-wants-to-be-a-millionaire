@@ -38,7 +38,11 @@ function Control(props: IControl) {
 
   if (isNavigation) {
     return (
-      <Link href={href !== undefined ? href : '/'} className={classNames}>
+      <Link
+        href={href !== undefined ? href : '/'}
+        className={classNames}
+        onClick={onClick}
+      >
         {text}
       </Link>
     );

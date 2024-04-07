@@ -1,18 +1,25 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import classnames from 'classnames';
 import Control from '../components/Control/Control';
 import {
   ControlThemes,
   ControlSizes,
 } from '../components/Control/controlProps';
+import { useAppDispatch, useAppSelector } from '../hooks/redux';
+import { gameSlice } from '../store/GameSlice';
 
 export default function Home() {
-  const router = useRouter();
-  const { earned } = router.query;
+  const dispatch = useAppDispatch();
 
-  const earnedAmount: number = typeof earned === 'string' ? parseInt(earned, 10) || 0 : 0;
-  const formattedEarnedAmount = new Intl.NumberFormat().format(earnedAmount);
+  const { earned } = useAppSelector((state) => state.gameReducer);
+  const { setEarned, setCurrentStep } = gameSlice.actions;
+
+  const formattedEarned = new Intl.NumberFormat().format(earned);
+
+  const handleOnStartClick = () => {
+    dispatch(setCurrentStep(0));
+    dispatch(setEarned(0));
+  };
 
   return (
     <main className={classnames('homepage', { final: earned })}>
@@ -34,7 +41,7 @@ export default function Home() {
         {earned ? (
           <>
             <h2 className="homepage__link-h2">Total score:</h2>
-            <h3 className="homepage__link-h3">{`$${formattedEarnedAmount} earned`}</h3>
+            <h3 className="homepage__link-h3">{`$${formattedEarned} earned`}</h3>
           </>
         )
           : (
@@ -50,6 +57,7 @@ export default function Home() {
             theme={ControlThemes.Primary}
             size={ControlSizes.Responsive}
             text={earned ? 'Try again' : 'Start'}
+            onClick={() => handleOnStartClick()}
             href="/game"
             isNavigation
           />
