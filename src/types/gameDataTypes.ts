@@ -1,3 +1,10 @@
+export interface IGameState {
+  earned: number;
+  currentStep: number;
+  fiftyFiftyUsedOnStep: boolean;
+  disabledHelpOption: boolean;
+}
+
 export interface IOption {
   marker: string;
   content: string;

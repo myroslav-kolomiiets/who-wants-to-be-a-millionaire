@@ -7,12 +7,19 @@ import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import { fetcher } from '../../utils/fetcher';
 import Steps from '../../components/Steps/Steps';
 import { IOption, IQuestion, IStaticData } from '../../types/gameDataTypes';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { gameSlice } from '../../store/GameSlice';
 
 function Game() {
-  const [currentStep, setCurrentStep] = useState<number>(0);
-  const [earned, setEarned] = useState<number>(0);
-  const [fiftyFiftyUsedOnStep, setFiftyFiftyUsedOnStep] = useState<boolean>(false);
-  const [disabledHelpOption, setDisabledHelpOption] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+
+  const {
+    earned, currentStep, fiftyFiftyUsedOnStep, disabledHelpOption,
+  } = useAppSelector((state) => state.gameReducer);
+  const {
+    setEarned, setCurrentStep, setFiftyFiftyUsedOnStep, setDisabledHelpOption,
+  } = gameSlice.actions;
+
   const [selectedOption, setSelectedOption] = useState<IOption | null>(
     null,
   );
@@ -33,18 +40,18 @@ function Game() {
 
   const stepForward = () => {
     setTimeout(() => {
-      setCurrentStep((prevStep) => prevStep + 1);
-      setEarned(questions[currentStep].cost);
-      setFiftyFiftyUsedOnStep(false);
+      dispatch(setCurrentStep(currentStep + 1));
+      dispatch(setEarned(earned + questions[currentStep].cost));
+      dispatch(setFiftyFiftyUsedOnStep(false));
       setFeedbackClass('');
     }, nextStepDelay);
   };
 
   const finalizationScore = (totalEarned: number) => {
     setTimeout(() => {
-      setCurrentStep(0);
-      setEarned(0);
-      router.push(`/?earned=${totalEarned}`);
+      dispatch(setCurrentStep(0));
+      dispatch(setEarned(totalEarned));
+      router.push('/');
     }, nextStepDelay);
   };
 
@@ -76,8 +83,8 @@ function Game() {
     if (disabledHelpOption) {
       return;
     }
-    setFiftyFiftyUsedOnStep(true);
-    setDisabledHelpOption(true);
+    dispatch(setFiftyFiftyUsedOnStep(true));
+    dispatch(setDisabledHelpOption(true));
   };
 
   return (
